@@ -30,7 +30,9 @@
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": ["prettier --write --no-semi --single-quote", "git add"]
@@ -66,6 +68,7 @@
   "devDependencies": {
     "@types/jest": "^22.0.0",
     "@types/node": "^9.3.0",
+    "all-contributors-cli": "^4.10.1",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",
