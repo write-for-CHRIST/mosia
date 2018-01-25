@@ -1,14 +1,14 @@
-import DummyClass from '../src/mosia'
+import Mosia from '../src/mosia'
 
 /**
  * Dummy test
  */
-describe('Dummy test', () => {
+describe('Mosia test', () => {
   it('works if true is truthy', () => {
     expect(true).toBeTruthy()
   })
 
   it('DummyClass is instantiable', () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
+    expect(new Mosia()).toBeInstanceOf(Mosia)
   })
 })

@@ -1,4 +1,7 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-// import "core-js/fn/array.find"
-// ...
-export default class DummyClass {}
+import meow from 'meow'
+
+export default class Mosia {
+  cmd(input: meow.Result) {
+    console.log(input)
+  }
+}
