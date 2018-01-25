@@ -1,11 +1,13 @@
 # Mosia (מוֹשִׁיעַ)
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Greenkeeper badge](https://badges.greenkeeper.io/write-for-CHRIST/mosia.svg)](https://greenkeeper.io/)
 [![Travis](https://img.shields.io/travis/write-for-CHRIST/mosia.svg)](https://travis-ci.org/write-for-CHRIST/mosia)
 [![Coveralls](https://img.shields.io/coveralls/write-for-CHRIST/mosia.svg)](https://coveralls.io/github/write-for-CHRIST/mosia)
 [![Dev Dependencies](https://david-dm.org/write-for-CHRIST/mosia/dev-status.svg)](https://david-dm.org/write-for-CHRIST/mosia?type=dev)
+[![Greenkeeper badge](https://badges.greenkeeper.io/write-for-CHRIST/mosia.svg)](https://greenkeeper.io/)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
+[![Write For Christ](https://img.shields.io/badge/Write%20For-Christ-green.svg)](http://writeforchrist.org)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#contributors)
 
 Mosia is a one-in-all solution for developer to build, test, and deploy JavaScript application.
 
@@ -18,18 +20,18 @@ npm install --global mosia
 
 Server machine:
 ```
-docker run -d -v /your/mosia/data:/data
+docker run -d -v /your/mosia/data:/data -p 7777:7777 writeforchrist/mosia
 ```
 
 ### Features
 
- - Monorepo.
- - Run your project in a container using Docker.
- - Deploy your code using docker image.
+ - Build for monorepo, but single repo supported.
+ - Easy containerizing your app with Docker.
+ - Deploy your code using Docker image.
  - Ship your code to docker registry (public or private).
- - Auto config Eslint based on selected standard.
+ - Auto config Eslint based on differents selected standards (standard, xo, airbnb, or custom).
  - Auto config test framework for your project.
- - Single configuration file.
+ - Simple configuration file.
  
 ### NPM scripts
 
