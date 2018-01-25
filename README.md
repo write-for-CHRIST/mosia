@@ -58,7 +58,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/26531658?v=4" width="64px;"/><br /><sub><b>Phạm Dương Nhật Nam</b></sub>](http://writeforchrist.org)<br />[💻](https://github.com/write-for-CHRIST/mosia/commits?author=nampdn "Code") [📖](https://github.com/write-for-CHRIST/mosia/commits?author=nampdn "Documentation") |
+| [<img src="https://avatars3.githubusercontent.com/u/26531658?v=4" width="100px;"/><br /><sub><b>Phạm Dương Nhật Nam</b></sub>](http://writeforchrist.org)<br />[💻](https://github.com/write-for-CHRIST/mosia/commits?author=nampdn "Code") [📖](https://github.com/write-for-CHRIST/mosia/commits?author=nampdn "Documentation") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
