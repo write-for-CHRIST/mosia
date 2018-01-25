@@ -1,5 +1,5 @@
 # Mosia (מוֹשִׁיעַ)
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Greenkeeper badge](https://badges.greenkeeper.io/write-for-CHRIST/mosia.svg)](https://greenkeeper.io/)
@@ -58,6 +58,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
+| [<img src="https://avatars3.githubusercontent.com/u/26531658?v=4" width="64px;"/><br /><sub><b>Phạm Dương Nhật Nam</b></sub>](http://writeforchrist.org)<br />[💻](https://github.com/write-for-CHRIST/mosia/commits?author=nampdn "Code") [📖](https://github.com/write-for-CHRIST/mosia/commits?author=nampdn "Documentation") |
+| :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

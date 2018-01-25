@@ -6,5 +6,16 @@
   ],
   "imageSize": 64,
   "commit": true,
-  "contributors": []
+  "contributors": [
+    {
+      "login": "nampdn",
+      "name": "Phạm Dương Nhật Nam",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/26531658?v=4",
+      "profile": "http://writeforchrist.org",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ]
 }
