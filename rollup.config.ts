@@ -3,6 +3,7 @@ import commonjs from "rollup-plugin-commonjs"
 import sourceMaps from "rollup-plugin-sourcemaps"
 import camelCase from "lodash.camelcase"
 import typescript from "rollup-plugin-typescript2"
+import replace from "rollup-plugin-replace"
 
 const pkg = require("./package.json")
 
@@ -11,7 +12,13 @@ const libraryName = "mosia"
 export default [
   {
     input: `src/cli.js`,
-    output: { file: "dist/cli.umd.js", format: "umd" },
+    output: { file: "dist/cli.js", format: "cjs" },
+    banner: "#!/usr/bin/env node",
+    plugins: [
+      replace({
+        "#!/usr/bin/env node": ""
+      })
+    ]
   },
   {
     input: `src/${libraryName}.ts`,
