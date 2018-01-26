@@ -11,7 +11,7 @@ export class InitCommand {
   writeConfig() {}
 }
 
-const action = (bar: string, foo: string) => {
+const action = () => {
   run()
     .then(() => {
       console.log(chalk.green('Successfully initialize Mosia for your project!'))
