@@ -20,7 +20,7 @@ export default [
     banner: "#!/usr/bin/env node",
     sourcemap: true,
     // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-    external: ["commander"],
+    external: ["commander", "chalk", "inquirer"],
     watch: {
       include: "src/**"
     },
@@ -39,8 +39,10 @@ export default [
       builtins(),
       // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
       commonjs({
-        include: [],
-        namedExports: {}
+        include: ["node_modules/**"],
+        namedExports: {
+          "node_modules/inquirer/lib/inquirer.js": ["prompt"]
+        }
       }),
       // Resolve source maps to the original source
       sourceMaps()
