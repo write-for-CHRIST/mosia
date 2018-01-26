@@ -15,6 +15,7 @@
   "main": "dist/mosia.umd.js",
   "module": "dist/mosia.es5.js",
   "typings": "dist/types/mosia.d.ts",
+  "preferGlobal": true,
   "bin": {
     "mosia": "dist/mosia.umd.js"
   },
