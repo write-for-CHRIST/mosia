@@ -11,7 +11,14 @@ export default class Program {
 
   constructor(commander: Commander) {
     this.commander = commander
+    this.init()
   }
+
+  init() {
+    this.commander.version('0.1.0').description(logo)
+    this.registerAllCmd(cmdList)
+  }
+
   /**
    * Register all the exported command in ./commands/index.ts
    * @param cmdList List of exported commands
@@ -31,9 +38,6 @@ export default class Program {
    * @param argv
    */
   run(argv: string[]) {
-    this.commander.version('0.1.0').description(logo)
-    this.registerAllCmd(cmdList)
-    console.log(argv)
     this.commander.parse(argv)
   }
 }
