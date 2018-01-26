@@ -34,7 +34,9 @@ export default [
         browser: true
       }),
       // Compile TypeScript files
-      typescript(),
+      typescript({
+        exclude: "src/**/*.test.ts"
+      }),
       globals(),
       builtins(),
       // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
