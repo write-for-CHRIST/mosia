@@ -125,6 +125,10 @@
   version "4.14.74"
   resolved "https://npm.vgm.tv/@types%2flodash/-/lodash-4.14.74.tgz#ac3bd8db988e7f7038e5d22bd76a7ba13f876168"
 
+"@types/lodash@^4.14.98":
+  version "4.14.98"
+  resolved "https://npm.vgm.tv/@types%2flodash/-/lodash-4.14.98.tgz#aaf012ae443e657e7885e605a4c1b340db160609"
+
 "@types/marked@0.3.0":
   version "0.3.0"
   resolved "https://npm.vgm.tv/@types%2fmarked/-/marked-0.3.0.tgz#583c223dd33385a1dda01aaf77b0cd0411c4b524"
