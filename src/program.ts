@@ -2,6 +2,7 @@
 import { Command as Commander } from 'commander'
 
 // Internal import
+import pkg from './constants/pkg'
 import { Command } from './models/Command'
 import { cmdList } from './commands'
 import logo from './logo'
@@ -15,7 +16,8 @@ export default class Program {
   }
 
   init() {
-    this.commander.version('0.1.0').description(logo)
+    const { version } = pkg
+    this.commander.version(version).description(logo)
     this.registerAllCmd(cmdList)
   }
 

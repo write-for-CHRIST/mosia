@@ -20,7 +20,7 @@ export default [
     banner: "#!/usr/bin/env node",
     sourcemap: true,
     // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-    external: ["commander", "chalk", "inquirer"],
+    external: ["commander", "chalk", "inquirer", "read-pkg", "conf", "update-notifier"],
     watch: {
       include: "src/**"
     },

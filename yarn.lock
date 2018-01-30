@@ -273,6 +273,10 @@
   dependencies:
     "@types/node" "*"
 
+"@types/update-notifier@^2.0.0":
+  version "2.0.0"
+  resolved "https://npm.vgm.tv/@types%2fupdate-notifier/-/update-notifier-2.0.0.tgz#a1adf2850fbec39e1622fa97ce1314b73e469a19"
+
 JSONStream@^1.0.4:
   version "1.3.2"
   resolved "https://npm.vgm.tv/JSONStream/-/JSONStream-1.3.2.tgz#c102371b6ec3a7cf3b847ca00c20bb0fce4c6dea"
