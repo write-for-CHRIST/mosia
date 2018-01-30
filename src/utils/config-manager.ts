@@ -4,13 +4,13 @@ import _ from 'lodash'
 import chalk from 'chalk'
 
 // Internal import
-import { Config, ConfigPackage } from '../models/Config'
+import { Config, ConfigPackage, ConfOptions } from '../models/Config'
 import { ConfigKey } from '../constants/config'
 
 export default class ConfigManager extends Config {
   conf: Conf
 
-  constructor(public confOpts: any) {
+  constructor(public confOpts: ConfOptions<any>) {
     super()
     this.conf = new Conf(confOpts)
     this.packages = []

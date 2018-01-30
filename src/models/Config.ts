@@ -1,3 +1,10 @@
+export interface ConfOptions<T> {
+  defaults?: { [key: string]: T }
+  configName?: string
+  projectName?: string
+  cwd?: string
+}
+
 export interface ConfigPackage {
   /**
    * Name of the package.
