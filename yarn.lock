@@ -92,6 +92,10 @@
   dependencies:
     commander "*"
 
+"@types/conf@^1.1.0":
+  version "1.1.0"
+  resolved "https://npm.vgm.tv/@types%2fconf/-/conf-1.1.0.tgz#d618191905f33f3ad41fc2a5e03356df6c983483"
+
 "@types/fs-extra@4.0.0":
   version "4.0.0"
   resolved "https://npm.vgm.tv/@types%2ffs-extra/-/fs-extra-4.0.0.tgz#1dd742ad5c9bce308f7a52d02ebc01421bc9102f"
@@ -142,6 +146,16 @@
 "@types/node@*", "@types/node@^9.3.0":
   version "9.3.0"
   resolved "https://npm.vgm.tv/@types%2fnode/-/node-9.3.0.tgz#3a129cda7c4e5df2409702626892cb4b96546dd5"
+
+"@types/normalize-package-data@*":
+  version "2.4.0"
+  resolved "https://npm.vgm.tv/@types%2fnormalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
+
+"@types/read-pkg@^3.0.0":
+  version "3.0.0"
+  resolved "https://npm.vgm.tv/@types%2fread-pkg/-/read-pkg-3.0.0.tgz#17ab6f0b396a58a5567ee387f558f2caedc8ae53"
+  dependencies:
+    "@types/normalize-package-data" "*"
 
 "@types/rx-core-binding@*":
   version "4.0.4"
@@ -244,6 +258,10 @@
 "@types/strip-json-comments@0.0.30":
   version "0.0.30"
   resolved "https://npm.vgm.tv/@types%2fstrip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
+
+"@types/tempy@^0.1.0":
+  version "0.1.0"
+  resolved "https://npm.vgm.tv/@types%2ftempy/-/tempy-0.1.0.tgz#8ba0339dcd5abb554f301683dc3396d153ec5bfd"
 
 "@types/through@*":
   version "0.0.29"
@@ -817,7 +835,7 @@ babel-plugin-transform-es2015-modules-amd@^6.22.0, babel-plugin-transform-es2015
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-plugin-transform-es2015-modules-commonjs@^6.23.0, babel-plugin-transform-es2015-modules-commonjs@^6.24.1:
+babel-plugin-transform-es2015-modules-commonjs@^6.23.0, babel-plugin-transform-es2015-modules-commonjs@^6.24.1, babel-plugin-transform-es2015-modules-commonjs@^6.26.0:
   version "6.26.0"
   resolved "https://npm.vgm.tv/babel-plugin-transform-es2015-modules-commonjs/-/babel-plugin-transform-es2015-modules-commonjs-6.26.0.tgz#0d8394029b7dc6abe1a97ef181e00758dd2e5d8a"
   dependencies:
@@ -5614,6 +5632,17 @@ tar@^2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+temp-dir@^1.0.0:
+  version "1.0.0"
+  resolved "https://npm.vgm.tv/temp-dir/-/temp-dir-1.0.0.tgz#0a7c0ea26d3a39afa7e0ebea9c1fc0bc4daa011d"
+
+tempy@^0.2.1:
+  version "0.2.1"
+  resolved "https://npm.vgm.tv/tempy/-/tempy-0.2.1.tgz#9038e4dbd1c201b74472214179bc2c6f7776e54c"
+  dependencies:
+    temp-dir "^1.0.0"
+    unique-string "^1.0.0"
 
 term-size@^1.2.0:
   version "1.2.0"
