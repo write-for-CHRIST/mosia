@@ -3,7 +3,8 @@ import Program from './program'
 import { cmdList } from './commands'
 
 const cmd = new Commander()
-let program: Program = null
+let program: Program
+
 describe('Program', () => {
   beforeAll(() => {
     program = new Program(cmd)

@@ -2,7 +2,7 @@ export enum CommandType {
   GLOBAL = 'global',
   PACKAGE = 'package',
   DOCKER = 'docker',
-  NPM = 'npm'
+  NPM = 'npm',
 }
 
 export interface Command {

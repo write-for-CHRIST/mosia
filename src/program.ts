@@ -2,7 +2,7 @@
 import { Command as Commander } from 'commander'
 
 // Internal import
-import { Command } from './commands/Command'
+import { Command } from './models/Command'
 import { cmdList } from './commands'
 import logo from './logo'
 
