@@ -54,7 +54,7 @@ export default class ConfigManager extends Config {
    * Retrieve specific package from config file
    * @param {string} name Package name
    */
-  getPackage(name: string): ConfigPackage {
+  getPackage(name: string): ConfigPackage | null {
     // Load latest config
     this.load()
     const index = _.findIndex(this.packages, pkg => pkg.name === name)
@@ -62,5 +62,20 @@ export default class ConfigManager extends Config {
       return this.packages[index]
     }
     return null
+  }
+
+  /**
+   * Set config monorepo or not.
+   * @param {boolean} monorepo Whether the project is monorepo or not.
+   */
+  setMonorepo(monorepo: boolean): void {
+    this.conf.set(ConfigKey.MONOREPO, Boolean(monorepo))
+  }
+
+  /**
+   * Check whether the project is a monorepo or not.
+   */
+  isMonorepo(): boolean {
+    return Boolean(this.conf.get(ConfigKey.MONOREPO))
   }
 }

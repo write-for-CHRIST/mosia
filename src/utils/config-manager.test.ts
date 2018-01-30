@@ -76,4 +76,16 @@ describe('ConfigManager', () => {
     const result = cm.addPackage(samplePkg)
     expect(result).toBeFalsy()
   })
+
+  it('should set monorepo', done => {
+    const conf = cm.getConf()
+
+    conf.onDidChange(ConfigKey.MONOREPO, (oldVal, newVal) => {
+      const isMonorepo = cm.isMonorepo()
+      expect(isMonorepo).toBeTruthy()
+      done()
+    })
+
+    cm.setMonorepo(true)
+  })
 })
