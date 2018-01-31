@@ -4,6 +4,7 @@ import readPkg from 'read-pkg'
 import Conf from 'conf'
 
 // Internal import
+import * as log from '../../utils/logger'
 import ConfigManager from '../../utils/config-manager'
 import { ConfOptions } from '../../models/Config'
 import { ConfigKey, defaultConfig } from '../../constants/config'
@@ -23,7 +24,7 @@ export const init = ({ monorepo = true }: IPromptInitInput, explicitConfig?: Con
   const cm = new ConfigManager(projectConfig)
   cm.setMonorepo(monorepo)
 
-  console.log(chalk.green(`Created mosia.json in ${cm.getConf().path}`))
+  log.success(`Created mosia.json in ${cm.getConf().path}`)
 }
 
 /**
@@ -45,9 +46,9 @@ export const run = async () => {
 export const action = () => {
   run()
     .then(() => {
-      console.log(chalk.green('Successfully initialize Mosia for your project!'))
+      log.success('Successfully initialize Mosia for your project!')
     })
-    .catch(err => console.error(err))
+    .catch(err => log.error(err))
 }
 
 export const InitMetaCommand: Command = {
