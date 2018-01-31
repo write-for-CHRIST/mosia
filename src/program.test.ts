@@ -16,6 +16,6 @@ describe('Program', () => {
 
   it('register all available command', () => {
     program.registerAllCmd(cmdList)
-    expect(program.commander.commands).toHaveLength(cmdList.length + 1)
+    expect(program.commander.commands).toHaveLength(cmdList.length + 2)
   })
 })

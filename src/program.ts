@@ -31,6 +31,10 @@ export default class Program {
       const cmd = this.commander.command(curCmd.name)
       curCmd.description && cmd.description(curCmd.description)
       curCmd.alias && cmd.alias(curCmd.alias)
+      curCmd.options &&
+        curCmd.options.forEach(option => {
+          cmd.option(option.flags, option.description)
+        })
       cmd.action(curCmd.action)
     }
   }

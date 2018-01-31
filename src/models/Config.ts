@@ -65,5 +65,6 @@ export interface ConfigPackage {
 }
 
 export class Config {
+  monorepo: Boolean
   packages: ConfigPackage[]
 }

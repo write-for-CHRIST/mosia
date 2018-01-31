@@ -25,6 +25,7 @@ export default class ConfigManager extends Config {
    * Load all config from Mosia config file
    */
   load() {
+    this.monorepo = this.conf.get(ConfigKey.MONOREPO)
     this.packages = this.conf.get(ConfigKey.PACKAGES)
   }
 
@@ -33,6 +34,18 @@ export default class ConfigManager extends Config {
    */
   save() {
     this.conf.set(ConfigKey.PACKAGES, this.packages)
+  }
+
+  /**
+   * Check whether a package with provided name is existed or not.
+   * @param name Package name to check
+   */
+  isPackageExists(name: string): Boolean {
+    const index = _.findIndex(this.packages, pkg => pkg.name === name)
+    if (index > -1) {
+      return true
+    }
+    return false
   }
 
   /**
