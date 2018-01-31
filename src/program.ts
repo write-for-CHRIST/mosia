@@ -30,7 +30,7 @@ export default class Program {
       const curCmd = cmdList[i]
       const cmd = this.commander.command(curCmd.name)
       curCmd.description && cmd.description(curCmd.description)
-      curCmd.alias && cmd.alias(<string>curCmd.alias)
+      curCmd.alias && cmd.alias(curCmd.alias)
       cmd.action(curCmd.action)
     }
   }

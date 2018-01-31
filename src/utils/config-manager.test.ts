@@ -1,4 +1,5 @@
 // External import
+
 import fs from 'fs'
 import Conf from 'conf'
 import { directory } from 'tempy'
@@ -42,9 +43,11 @@ describe('ConfigManager', () => {
   it('should read packages config', done => {
     const file = cm.conf.path /* ? */
     fs.readFile(file, 'utf8', (err, data) => {
-      const json = JSON.parse(data) /* ? */
-      expect(json[ConfigKey.PACKAGES]).toBeTruthy()
-      done()
+      if (!err) {
+        const json = JSON.parse(data) /* ? */
+        expect(json[ConfigKey.PACKAGES]).toBeTruthy()
+        done()
+      }
     })
   })
 
@@ -55,10 +58,10 @@ describe('ConfigManager', () => {
       path: 'lib/mosia-lib',
     }
 
-    conf.onDidChange(ConfigKey.PACKAGES, (oldVal, newVal) => {
+    conf.onDidChange(ConfigKey.PACKAGES, (oldVal: any, newVal: any) => {
       const newlyPackage = cm.getPackage(newPkg.name)
       expect(newlyPackage).toBeTruthy()
-      expect(newlyPackage.path).toEqual(newPkg.path)
+      expect(newlyPackage!.path).toEqual(newPkg.path)
       done()
     })
 
@@ -80,7 +83,7 @@ describe('ConfigManager', () => {
   it('should set monorepo', done => {
     const conf = cm.getConf()
 
-    conf.onDidChange(ConfigKey.MONOREPO, (oldVal, newVal) => {
+    conf.onDidChange(ConfigKey.MONOREPO, (oldVal: any, newVal: any) => {
       const isMonorepo = cm.isMonorepo()
       expect(isMonorepo).toBeTruthy()
       done()

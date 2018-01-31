@@ -1,5 +1,4 @@
-import { prompt } from 'inquirer'
-import { Questions } from 'inquirer'
+import { Questions, prompt } from 'inquirer'
 
 export interface IPromptInitInput {
   monorepo: boolean

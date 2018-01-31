@@ -47,7 +47,7 @@ export const action = () => {
     .then(() => {
       console.log(chalk.green('Successfully initialize Mosia for your project!'))
     })
-    .catch(err => console.error())
+    .catch(err => console.error(err))
 }
 
 export const InitMetaCommand: Command = {

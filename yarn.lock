@@ -3,21 +3,22 @@
 
 
 "@babel/code-frame@^7.0.0-beta.35":
-  version "7.0.0-beta.38"
-  resolved "https://npm.vgm.tv/@babel%2fcode-frame/-/code-frame-7.0.0-beta.38.tgz#c0af5930617e55e050336838e3a3670983b0b2b2"
+  version "7.0.0-beta.39"
+  resolved "https://npm.vgm.tv/@babel%2fcode-frame/-/code-frame-7.0.0-beta.39.tgz#91c90bb65207fc5a55128cb54956ded39e850457"
   dependencies:
     chalk "^2.0.0"
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
 "@octokit/rest@^14.0.3":
-  version "14.0.5"
-  resolved "https://npm.vgm.tv/@octokit%2frest/-/rest-14.0.5.tgz#6d130aa0c0024e2e2c8a4e3a48373f70b6ba983e"
+  version "14.0.7"
+  resolved "https://npm.vgm.tv/@octokit%2frest/-/rest-14.0.7.tgz#fef887a79c59c9add0ce66491ab8a990f2462681"
   dependencies:
     before-after-hook "^1.1.0"
     debug "^3.1.0"
     dotenv "^4.0.0"
     https-proxy-agent "^2.1.0"
+    is-array-buffer "^1.0.0"
     is-stream "^1.1.0"
     lodash "^4.17.4"
     proxy-from-env "^1.0.0"
@@ -53,8 +54,8 @@
     url-join "^3.0.0"
 
 "@semantic-release/npm@^2.0.0":
-  version "2.6.4"
-  resolved "https://npm.vgm.tv/@semantic-release%2fnpm/-/npm-2.6.4.tgz#0343816d94f3d1d6539c216c2886391647e3f9b7"
+  version "2.7.0"
+  resolved "https://npm.vgm.tv/@semantic-release%2fnpm/-/npm-2.7.0.tgz#69d6b28c969c658458135eb8d725356c73a7320a"
   dependencies:
     "@semantic-release/error" "^2.1.0"
     debug "^3.1.0"
@@ -69,15 +70,15 @@
     registry-auth-token "^3.3.1"
 
 "@semantic-release/release-notes-generator@^6.0.0":
-  version "6.0.3"
-  resolved "https://npm.vgm.tv/@semantic-release%2frelease-notes-generator/-/release-notes-generator-6.0.3.tgz#c52bea12479a648bcb585d95940b4d72e57c5b71"
+  version "6.0.5"
+  resolved "https://npm.vgm.tv/@semantic-release%2frelease-notes-generator/-/release-notes-generator-6.0.5.tgz#cd98a374a525d524a82ee767287b65d533f467d3"
   dependencies:
     conventional-changelog-angular "^1.4.0"
-    conventional-changelog-writer "^2.0.1"
+    conventional-changelog-writer "^3.0.0"
     conventional-commits-parser "^2.0.0"
     debug "^3.1.0"
     get-stream "^3.0.0"
-    git-url-parse "^7.0.1"
+    git-url-parse "^8.0.0"
     import-from "^2.1.0"
     into-stream "^3.1.0"
     lodash "^4.17.4"
@@ -92,9 +93,9 @@
   dependencies:
     commander "*"
 
-"@types/conf@^1.1.0":
-  version "1.1.0"
-  resolved "https://npm.vgm.tv/@types%2fconf/-/conf-1.1.0.tgz#d618191905f33f3ad41fc2a5e03356df6c983483"
+"@types/conf@^1.4.0":
+  version "1.4.0"
+  resolved "https://npm.vgm.tv/@types%2fconf/-/conf-1.4.0.tgz#b974ea1156569ea28aa2dafc47ac38b68438af74"
 
 "@types/fs-extra@4.0.0":
   version "4.0.0"
@@ -118,8 +119,8 @@
     "@types/through" "*"
 
 "@types/jest@^22.0.0":
-  version "22.1.0"
-  resolved "https://npm.vgm.tv/@types%2fjest/-/jest-22.1.0.tgz#c1de03bbac66fac4cc741f7a69cb73bc01a1707c"
+  version "22.1.1"
+  resolved "https://npm.vgm.tv/@types%2fjest/-/jest-22.1.1.tgz#231d7c60ed130200af9e96c82469ed25b59a7ea2"
 
 "@types/lodash@4.14.74":
   version "4.14.74"
@@ -148,8 +149,8 @@
   resolved "https://npm.vgm.tv/@types%2fminimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
 
 "@types/node@*", "@types/node@^9.3.0":
-  version "9.3.0"
-  resolved "https://npm.vgm.tv/@types%2fnode/-/node-9.3.0.tgz#3a129cda7c4e5df2409702626892cb4b96546dd5"
+  version "9.4.0"
+  resolved "https://npm.vgm.tv/@types%2fnode/-/node-9.4.0.tgz#b85a0bcf1e1cc84eb4901b7e96966aedc6f078d1"
 
 "@types/normalize-package-data@*":
   version "2.4.0"
@@ -317,6 +318,13 @@ agent-base@^4.1.0:
   resolved "https://npm.vgm.tv/agent-base/-/agent-base-4.2.0.tgz#9838b5c3392b962bad031e6a4c5e1024abec45ce"
   dependencies:
     es6-promisify "^5.0.0"
+
+aggregate-error@^1.0.0:
+  version "1.0.0"
+  resolved "https://npm.vgm.tv/aggregate-error/-/aggregate-error-1.0.0.tgz#888344dad0220a72e3af50906117f48771925fac"
+  dependencies:
+    clean-stack "^1.0.0"
+    indent-string "^3.0.0"
 
 ajv@^4.9.1:
   version "4.11.8"
@@ -1345,6 +1353,10 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+clean-stack@^1.0.0:
+  version "1.3.0"
+  resolved "https://npm.vgm.tv/clean-stack/-/clean-stack-1.3.0.tgz#9e821501ae979986c46b1d66d2d432db2fd4ae31"
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://npm.vgm.tv/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -1532,15 +1544,15 @@ content-type-parser@^1.0.2:
   resolved "https://npm.vgm.tv/content-type-parser/-/content-type-parser-1.0.2.tgz#caabe80623e63638b2502fd4c7f12ff4ce2352e7"
 
 conventional-changelog-angular@^1.4.0:
-  version "1.6.0"
-  resolved "https://npm.vgm.tv/conventional-changelog-angular/-/conventional-changelog-angular-1.6.0.tgz#0a26a071f2c9fcfcf2b86ba0cfbf6e6301b75bfa"
+  version "1.6.1"
+  resolved "https://npm.vgm.tv/conventional-changelog-angular/-/conventional-changelog-angular-1.6.1.tgz#e1434d017c854032b272f690424a8c0ca16dc318"
   dependencies:
     compare-func "^1.3.1"
     q "^1.4.1"
 
-conventional-changelog-writer@^2.0.1:
-  version "2.0.3"
-  resolved "https://npm.vgm.tv/conventional-changelog-writer/-/conventional-changelog-writer-2.0.3.tgz#073b0c39f1cc8fc0fd9b1566e93833f51489c81c"
+conventional-changelog-writer@^3.0.0:
+  version "3.0.0"
+  resolved "https://npm.vgm.tv/conventional-changelog-writer/-/conventional-changelog-writer-3.0.0.tgz#e106154ed94341e387d717b61be2181ff53254cc"
   dependencies:
     compare-func "^1.3.1"
     conventional-commits-filter "^1.1.1"
@@ -1950,8 +1962,8 @@ elliptic@^6.0.0:
     minimalistic-crypto-utils "^1.0.0"
 
 env-ci@^1.0.0:
-  version "1.2.1"
-  resolved "https://npm.vgm.tv/env-ci/-/env-ci-1.2.1.tgz#3973dd365289df494fe6fbacbf208486d79c4207"
+  version "1.3.1"
+  resolved "https://npm.vgm.tv/env-ci/-/env-ci-1.3.1.tgz#886e7d3d0bb3b432f68345f37e985d92a6359ea9"
   dependencies:
     execa "^0.9.0"
     java-properties "^0.2.9"
@@ -2447,9 +2459,9 @@ git-up@^2.0.0:
     is-ssh "^1.3.0"
     parse-url "^1.3.0"
 
-git-url-parse@^7.0.1:
-  version "7.0.2"
-  resolved "https://npm.vgm.tv/git-url-parse/-/git-url-parse-7.0.2.tgz#75fc7ae08e5daa90edc59043cdfa8da57c5a8715"
+git-url-parse@^8.0.0:
+  version "8.0.1"
+  resolved "https://npm.vgm.tv/git-url-parse/-/git-url-parse-8.0.1.tgz#eb3fa427e294d214d9abbeb59637cc8646279c00"
   dependencies:
     git-up "^2.0.0"
 
@@ -2714,6 +2726,10 @@ homedir-polyfill@^1.0.0, homedir-polyfill@^1.0.1:
   dependencies:
     parse-passwd "^1.0.0"
 
+hook-std@^0.4.0:
+  version "0.4.0"
+  resolved "https://npm.vgm.tv/hook-std/-/hook-std-0.4.0.tgz#fa8b2f84d358763137cb7d17e3308b28714bd174"
+
 hosted-git-info@^2.1.4, hosted-git-info@^2.4.2:
   version "2.5.0"
   resolved "https://npm.vgm.tv/hosted-git-info/-/hosted-git-info-2.5.0.tgz#6d60e34b3abbc8313062c3b798ef8d901a07af3c"
@@ -2901,6 +2917,10 @@ invariant@^2.2.2:
 invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://npm.vgm.tv/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
+
+is-array-buffer@^1.0.0:
+  version "1.0.0"
+  resolved "https://npm.vgm.tv/is-array-buffer/-/is-array-buffer-1.0.0.tgz#f32497a0509d109423f472003f98bab6a8ea34cb"
 
 is-arrayish@^0.2.1:
   version "0.2.1"
@@ -3502,8 +3522,8 @@ jsbn@~0.1.0:
   resolved "https://npm.vgm.tv/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
 
 jsdom@^11.5.1:
-  version "11.6.0"
-  resolved "https://npm.vgm.tv/jsdom/-/jsdom-11.6.0.tgz#7334781595ee8bdeea9742fc33fab5cdad6d195f"
+  version "11.6.2"
+  resolved "https://npm.vgm.tv/jsdom/-/jsdom-11.6.2.tgz#25d1ef332d48adf77fc5221fe2619967923f16bb"
   dependencies:
     abab "^1.0.4"
     acorn "^5.3.0"
@@ -3518,7 +3538,7 @@ jsdom@^11.5.1:
     html-encoding-sniffer "^1.0.2"
     left-pad "^1.2.0"
     nwmatcher "^1.4.3"
-    parse5 "^4.0.0"
+    parse5 "4.0.0"
     pn "^1.1.0"
     request "^2.83.0"
     request-promise-native "^1.0.5"
@@ -3741,8 +3761,8 @@ levn@~0.3.0:
     type-check "~0.3.2"
 
 lint-staged@^6.0.0:
-  version "6.0.1"
-  resolved "https://npm.vgm.tv/lint-staged/-/lint-staged-6.0.1.tgz#855f2993ab4a265430e2fd9828427e648d65e6b4"
+  version "6.1.0"
+  resolved "https://npm.vgm.tv/lint-staged/-/lint-staged-6.1.0.tgz#28f600c10a6cbd249ceb003118a1552e53544a93"
   dependencies:
     app-root-path "^2.0.0"
     chalk "^2.1.0"
@@ -4409,6 +4429,10 @@ p-reduce@^1.0.0:
   version "1.0.0"
   resolved "https://npm.vgm.tv/p-reduce/-/p-reduce-1.0.0.tgz#18c2b0dd936a4690a529f8231f58a0fdb6a47dfa"
 
+p-reflect@^1.0.0:
+  version "1.0.0"
+  resolved "https://npm.vgm.tv/p-reflect/-/p-reflect-1.0.0.tgz#f4fa1ee1bb546d8eb3ec0321148dfe0a79137bb8"
+
 p-retry@^1.0.0:
   version "1.0.0"
   resolved "https://npm.vgm.tv/p-retry/-/p-retry-1.0.0.tgz#3927332a4b7d70269b535515117fc547da1a6968"
@@ -4487,7 +4511,7 @@ parse-url@^1.3.0:
     is-ssh "^1.3.0"
     protocols "^1.4.0"
 
-parse5@^4.0.0:
+parse5@4.0.0:
   version "4.0.0"
   resolved "https://npm.vgm.tv/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
 
@@ -4878,8 +4902,8 @@ regexpu-core@^2.0.0:
     regjsparser "^0.1.4"
 
 registry-auth-token@^3.0.1, registry-auth-token@^3.3.1:
-  version "3.3.1"
-  resolved "https://npm.vgm.tv/registry-auth-token/-/registry-auth-token-3.3.1.tgz#fb0d3289ee0d9ada2cbb52af5dfe66cb070d3006"
+  version "3.3.2"
+  resolved "https://npm.vgm.tv/registry-auth-token/-/registry-auth-token-3.3.2.tgz#851fd49038eecb586911115af845260eec983f20"
   dependencies:
     rc "^1.1.6"
     safe-buffer "^5.0.1"
@@ -5093,8 +5117,8 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     inherits "^2.0.1"
 
 rollup-plugin-commonjs@^8.0.2:
-  version "8.2.6"
-  resolved "https://npm.vgm.tv/rollup-plugin-commonjs/-/rollup-plugin-commonjs-8.2.6.tgz#27e5b9069ff94005bb01e01bb46a1e4873784677"
+  version "8.3.0"
+  resolved "https://npm.vgm.tv/rollup-plugin-commonjs/-/rollup-plugin-commonjs-8.3.0.tgz#91b4ba18f340951e39ed7b1901f377a80ab3f9c3"
   dependencies:
     acorn "^5.2.1"
     estree-walker "^0.5.0"
@@ -5176,8 +5200,8 @@ rollup-pluginutils@^2.0.1:
     micromatch "^2.3.11"
 
 rollup@^0.55.0:
-  version "0.55.0"
-  resolved "https://npm.vgm.tv/rollup/-/rollup-0.55.0.tgz#e547149333bdd91457a9e8101cf86783e21c576e"
+  version "0.55.1"
+  resolved "https://npm.vgm.tv/rollup/-/rollup-0.55.1.tgz#baf4f23abe3014b29e56dea7d72d9946e56ac7dd"
 
 run-async@^2.2.0:
   version "2.3.0"
@@ -5228,14 +5252,15 @@ sax@^1.2.4:
   resolved "https://npm.vgm.tv/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
 semantic-release@^12.2.4:
-  version "12.2.4"
-  resolved "https://npm.vgm.tv/semantic-release/-/semantic-release-12.2.4.tgz#cbcf0842ab65a4da1908f48e05a4d895c58d539d"
+  version "12.4.1"
+  resolved "https://npm.vgm.tv/semantic-release/-/semantic-release-12.4.1.tgz#4faeee44fe7fbebbc7af8cc9e3522eb7877a0260"
   dependencies:
     "@semantic-release/commit-analyzer" "^5.0.0"
     "@semantic-release/error" "^2.1.0"
     "@semantic-release/github" "^3.0.1"
     "@semantic-release/npm" "^2.0.0"
     "@semantic-release/release-notes-generator" "^6.0.0"
+    aggregate-error "^1.0.0"
     chalk "^2.3.0"
     commander "^2.11.0"
     cosmiconfig "^4.0.0"
@@ -5244,10 +5269,12 @@ semantic-release@^12.2.4:
     execa "^0.9.0"
     get-stream "^3.0.0"
     git-log-parser "^1.2.0"
+    hook-std "^0.4.0"
     lodash "^4.17.4"
     marked "^0.3.9"
     marked-terminal "^2.0.0"
     p-reduce "^1.0.0"
+    p-reflect "^1.0.0"
     read-pkg-up "^3.0.0"
     resolve-from "^4.0.0"
     semver "^5.4.1"
@@ -5375,8 +5402,8 @@ source-map-support@^0.4.15:
     source-map "^0.5.6"
 
 source-map-support@^0.5.0:
-  version "0.5.2"
-  resolved "https://npm.vgm.tv/source-map-support/-/source-map-support-0.5.2.tgz#1a6297fd5b2e762b39688c7fc91233b60984f0a5"
+  version "0.5.3"
+  resolved "https://npm.vgm.tv/source-map-support/-/source-map-support-0.5.3.tgz#2b3d5fff298cfa4d1afd7d4352d569e9a0158e76"
   dependencies:
     source-map "^0.6.0"
 
@@ -5756,8 +5783,8 @@ trim-right@^1.0.1:
   resolved "https://npm.vgm.tv/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
 ts-jest@^22.0.0:
-  version "22.0.1"
-  resolved "https://npm.vgm.tv/ts-jest/-/ts-jest-22.0.1.tgz#48942936a466c2e76e259b02e2f1356f1839afc3"
+  version "22.0.2"
+  resolved "https://npm.vgm.tv/ts-jest/-/ts-jest-22.0.2.tgz#d83eb2e3a2a4f3be098afea5a06d38547d528c72"
   dependencies:
     babel-core "^6.24.1"
     babel-plugin-istanbul "^4.1.4"
@@ -5768,7 +5795,7 @@ ts-jest@^22.0.0:
     jest-config "^22.0.1"
     pkg-dir "^2.0.0"
     source-map-support "^0.5.0"
-    yargs "^10.0.3"
+    yargs "^11.0.0"
 
 ts-node@^4.1.0:
   version "4.1.0"

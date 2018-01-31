@@ -25,10 +25,14 @@ describe('init command', () => {
     init({ monorepo: true }, confOpts)
     setTimeout(() => {
       fs.readFile(join(cwd, `${confOpts.configName}.json`), 'utf8', (err, data) => {
-        const mosiaConfig = JSON.parse(data)
-        expect(mosiaConfig).toHaveProperty(ConfigKey.PACKAGES)
-        expect(mosiaConfig).toHaveProperty(ConfigKey.MONOREPO)
-        done()
+        if (!err) {
+          const mosiaConfig = JSON.parse(data)
+          expect(mosiaConfig).toHaveProperty(ConfigKey.PACKAGES)
+          expect(mosiaConfig).toHaveProperty(ConfigKey.MONOREPO)
+          done()
+        } else {
+          done()
+        }
       })
     }, 1000)
   })
