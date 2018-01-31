@@ -37,23 +37,23 @@ docker run -d -v /your/mosia/data:/data -p 7777:7777 writeforchrist/mosia
 
 #### Global command
  - `mosia init`: init mosia config file for the current project.
- - `mosia registry add [registry]`: add a private docker registry.
- - `mosia npm add [npm]`: add a private npm registry.
+ - `mosia registry add <registry>`: add a private docker registry.
+ - `mosia npm add <npm>`: add a private npm registry.
 
-#### Local command
- - `mosia add [package-name]`: add new package to the current project.
- - `mosia [package-name]:add`: install one or more dependencies for the provided package.
- - `mosia [package-name]:remove`: remove one or more dependencies for the provided package.
- - `mosia cmd [package-name]:[command]`: execute custom command for the provided package, it can be run inside the container when Dockerfile is available.
- - `mosia docker add [package-name]`: setup Dockerfile for the package name.
- - `mosia docker release [package-name]:[tag]`: build the package and push it to the registry.
+#### Project commands:
+ - `mosia add <package-name>`: add new package to the current project.
+ - `mosia <package-name>:add`: install one or more dependencies for the provided package.
+ - `mosia <package-name>:remove`: remove one or more dependencies for the provided package.
+ - `mosia cmd <package-name>:<command>`: execute custom command for the provided package, it can be run inside the container when Dockerfile is available.
+ - `mosia docker add <package-name>`: setup Dockerfile for the package name.
+ - `mosia docker release <package-name>:<tag>`: build the package and push it to the registry.
 
 #### Server command
- - `mosia server add [mosia-url]`: add remote Mosia url exposed by your server.
+ - `mosia server add <mosia-url>`: add remote Mosia url exposed by your server.
  - `mosia server ls`: list all the applications deployed on the server.
- - `mosia server run [app]`: run/restart application.
- - `mosia server create [app]:[tag]`: create application on running server.
- - `mosia server recreate [app]:[tag]`: recreate running/stopped app from server with new image tag.
+ - `mosia server run <app>`: run/restart application.
+ - `mosia server create <app>:<tag>`: create application on running server.
+ - `mosia server recreate <app>:<tag>`: recreate running/stopped app from server with new image tag.
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
