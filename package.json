@@ -141,10 +141,10 @@
     "chalk": "^2.3.0",
     "commander": "^2.13.0",
     "conf": "^1.4.0",
-    "core-js": "^2.5.3",
-    "get-stdin": "^5.0.1",
+    "docker-composer": "^2.0.2",
     "inquirer": "^5.0.1",
     "lodash": "^4.17.4",
+    "node-dockerfile": "^0.7.1",
     "ora": "^1.3.0",
     "read-pkg": "^3.0.0",
     "update-notifier": "^2.3.0"

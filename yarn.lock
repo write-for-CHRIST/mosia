@@ -528,15 +528,15 @@ async-limiter@~1.0.0:
   version "1.0.0"
   resolved "https://npm.vgm.tv/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
 
-async@^1.4.0:
-  version "1.5.2"
-  resolved "https://npm.vgm.tv/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
-
-async@^2.0.0-rc.1, async@^2.1.4:
+async@2.6.0, async@^2.0.0-rc.1, async@^2.1.4:
   version "2.6.0"
   resolved "https://npm.vgm.tv/async/-/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
   dependencies:
     lodash "^4.14.0"
+
+async@^1.4.0:
+  version "1.5.2"
+  resolved "https://npm.vgm.tv/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
 async@~0.9.0:
   version "0.9.2"
@@ -1592,7 +1592,7 @@ convert-source-map@^1.4.0, convert-source-map@^1.5.0:
   version "1.5.1"
   resolved "https://npm.vgm.tv/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
 
-core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.3:
+core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.3"
   resolved "https://npm.vgm.tv/core-js/-/core-js-2.5.3.tgz#8acc38345824f16d8365b7c9b4259168e8ed603e"
 
@@ -1891,6 +1891,12 @@ dir-glob@^2.0.0:
   dependencies:
     arrify "^1.0.1"
     path-type "^3.0.0"
+
+docker-composer@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/docker-composer/-/docker-composer-2.0.2.tgz#4be0733c7172207954599af8f208f458201a6757"
+  dependencies:
+    async "2.6.0"
 
 doctrine@^0.7.2:
   version "0.7.2"
@@ -2426,10 +2432,6 @@ get-own-enumerable-property-symbols@^2.0.1:
 get-stdin@^4.0.1:
   version "4.0.1"
   resolved "https://npm.vgm.tv/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
-
-get-stdin@^5.0.1:
-  version "5.0.1"
-  resolved "https://npm.vgm.tv/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
 
 get-stream@3.0.0, get-stream@^3.0.0:
   version "3.0.0"
@@ -4136,6 +4138,10 @@ ncp@1.0.x:
 nerf-dart@^1.0.0:
   version "1.0.0"
   resolved "https://npm.vgm.tv/nerf-dart/-/nerf-dart-1.0.0.tgz#e6dab7febf5ad816ea81cf5c629c5a0ebde72c1a"
+
+node-dockerfile@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/node-dockerfile/-/node-dockerfile-0.7.1.tgz#fc062c77925a1f725249966253b1cadc270f099b"
 
 node-emoji@^1.4.1:
   version "1.8.1"
