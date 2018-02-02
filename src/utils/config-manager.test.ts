@@ -68,6 +68,11 @@ describe('ConfigManager', () => {
     cm.addPackage(newPkg)
   })
 
+  it('should check whether a package is existed', () => {
+    expect(cm.isPackageExists(samplePkg.name)).toBeTruthy()
+    expect(cm.isPackageExists('not-added-yet')).toBeFalsy()
+  })
+
   it('should return null if not found a package', () => {
     const conf = cm.getConf()
     const notFoundPkg = cm.getPackage('justanotherpkg')
