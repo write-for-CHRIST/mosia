@@ -37,12 +37,19 @@ export default class ConfigManager extends Config {
   }
 
   /**
+   * Get index of a added packages
+   * @param name Package name to find.
+   */
+  getPackageIndex(name: string): number {
+    return _.findIndex(this.packages, pkg => pkg.name === name)
+  }
+
+  /**
    * Check whether a package with provided name is existed or not.
    * @param name Package name to check
    */
   isPackageExists(name: string): Boolean {
-    const index = _.findIndex(this.packages, pkg => pkg.name === name)
-    if (index > -1) {
+    if (this.getPackageIndex(name) > -1) {
       return true
     }
     return false
@@ -53,14 +60,27 @@ export default class ConfigManager extends Config {
    * @param {ConfigPackage} newPkg New package object
    */
   addPackage(newPkg: ConfigPackage): Boolean {
-    const index = _.findIndex(this.packages, pkg => pkg.name === newPkg.name)
-    if (index > -1) {
+    if (this.isPackageExists(newPkg.name)) {
       return false
     }
+
     this.packages.push(newPkg)
     _.sortBy(this.packages, 'name')
     this.save()
     return true
+  }
+
+  /**
+   * Remove package from mosia.json file
+   * @param name Package name.
+   */
+  removePackage(name: string): Boolean {
+    const index = this.getPackageIndex(name)
+    if (index > -1) {
+      this.packages = _.filter(this.packages, pkg => pkg.name !== name)
+      return true
+    }
+    return false
   }
 
   /**
@@ -70,7 +90,7 @@ export default class ConfigManager extends Config {
   getPackage(name: string): ConfigPackage | null {
     // Load latest config
     this.load()
-    const index = _.findIndex(this.packages, pkg => pkg.name === name)
+    const index = this.getPackageIndex(name)
     if (index > -1) {
       return this.packages[index]
     }
