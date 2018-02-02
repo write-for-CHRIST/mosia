@@ -1,50 +1,55 @@
+// External import
 import { filter } from 'lodash'
 import { Command as Commander } from 'commander'
 
 // Utils import
 import * as log from '../../utils/logger'
-import ConfigManager from '../../utils/config-manager'
-
-// Constants import
-import { ConfigKey, defaultConfig } from '../../constants/config'
+import { getConfig } from '../../utils/config-manager'
 
 // Models import
 import { ConfigPackage, ConfOptions } from '../../models/Config'
 import { CommandType, Command } from '../../models/Command'
 
-export const pkg = (pack: ConfigPackage, explicitConfig?: ConfOptions<any>) => {
-  const projectConfig: ConfOptions<any> = explicitConfig || {
-    ...defaultConfig,
-    cwd: './',
-  }
-  const cm = new ConfigManager(projectConfig)
-  const success = cm.addPackage(pack)
-  if (success) {
-    log.success(`Added package ${pack.name} successfully!`)
-  } else {
-    log.error(`Something went wrong, please check package name and try again!`)
-  }
-}
+// Pkg command import
+import { promptPkgAdd } from './prompt'
+import pkgAdd from './pkg-add'
 
+/**
+ * Register all sub `pkg` operations.
+ * @param argv
+ */
 const subAction = (argv: string[]) => {
   const program = new Commander()
+
+  // pkg add <package-name>
   program
-    .command('add [package-name]')
+    .command('add <package-name>')
     .option('-l, --library', 'Specify this package is a library.')
     .option('-p, --path', 'Provide path for this package')
     .description('Add new package to project')
-    .action((packageName: string, cmd: any) => {
-      log.success(`Adding new package ${packageName}! ${cmd.path}`)
+    .action((...args: any[]) => {
+      // Expect: name, cmd
+      pkgAdd(args[0], args[1])
     })
+
+  // pkg remove <package-name>
   program
-    .command('remove [package-name]')
-    .description('Remove a package from project')
+    .command('remove <package-name>')
+    .alias('rm')
+    .description('Remove a package from project.')
     .action((packageName: string) => {
       log.success(`Removed package ${packageName}`)
     })
   program.parse(argv)
 }
 
+/**
+ * Main pkg action.
+ * This will parse all action to its subAction.
+ * @param command
+ * @param input
+ * @param options
+ */
 const action = (command: string, input: string, ...options: string[]) => {
   const argv = filter(process.argv, argument => argument !== 'pkg')
   input && subAction(argv)
@@ -54,16 +59,6 @@ export const PkgMetaCommand: Command = {
   name: 'pkg <command> [data]',
   description: 'Package manager',
   alias: 'p',
-  type: CommandType.GLOBAL,
-  options: [
-    {
-      flags: '-p, --path',
-      description: 'Package location path',
-    },
-    {
-      flags: '-l, --library',
-      description: 'Set package to a library',
-    },
-  ],
+  type: CommandType.PACKAGE,
   action,
 }

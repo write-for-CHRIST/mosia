@@ -5,7 +5,7 @@ import chalk from 'chalk'
 
 // Internal import
 import { Config, ConfigPackage, ConfOptions } from '../models/Config'
-import { ConfigKey } from '../constants/config'
+import { ConfigKey, defaultConfig } from '../constants/config'
 
 export default class ConfigManager extends Config {
   conf: Conf
@@ -91,4 +91,17 @@ export default class ConfigManager extends Config {
   isMonorepo(): boolean {
     return Boolean(this.conf.get(ConfigKey.MONOREPO))
   }
+}
+
+/**
+ * Get Config Manager instance.
+ * @param explicitConfig Explicit config for unit test
+ */
+export const getConfig = (explicitConfig?: ConfOptions<any>) => {
+  const projectConfig: ConfOptions<any> = explicitConfig || {
+    ...defaultConfig,
+    cwd: './',
+  }
+  const cm = new ConfigManager(projectConfig)
+  return cm
 }

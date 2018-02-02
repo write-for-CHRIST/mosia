@@ -61,7 +61,7 @@ export interface ConfigPackage {
    * If it is a library, maybe you want to link it to other packages in the npm modules.
    * @default false
    */
-  isLib?: boolean
+  library?: boolean
 }
 
 export class Config {

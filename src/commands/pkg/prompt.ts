@@ -5,27 +5,21 @@ import { ConfigPackage } from '../../models/Config'
 const pkgQuestions: Questions = [
   {
     type: 'input',
-    name: 'name',
-    message: 'Enter package name:',
-    filter: input => kebabCase(input),
-  },
-  {
-    type: 'input',
     name: 'path',
     message: 'Enter path to package:',
   },
   {
     type: 'confirm',
-    name: 'isLib',
+    name: 'library',
     message: 'Is this package a library?',
   },
 ]
 
-export const getPkgOption = async (): Promise<ConfigPackage> => {
+export const promptPkgAdd = async (name: string): Promise<ConfigPackage | any> => {
   try {
     const answer = await prompt(pkgQuestions)
-    const { name, path, isLib } = answer
-    return { name, path, isLib }
+    const { path, library } = answer
+    return { name, path, library }
   } catch (err) {
     throw new Error(err)
   }

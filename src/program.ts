@@ -1,7 +1,7 @@
 // External import
 import { Command as Commander } from 'commander'
 
-// Internal import
+// Internal import554
 import pkg from './constants/pkg'
 import { Command } from './models/Command'
 import { cmdList } from './commands'
