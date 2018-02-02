@@ -8,5 +8,10 @@ coverage
 dist
 compiled
 .awcache
+
+# Dev generated files
 .history
 .rpt2_cache
+
+# Test generated file
+mosia.json
