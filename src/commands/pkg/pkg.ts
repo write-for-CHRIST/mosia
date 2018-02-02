@@ -18,8 +18,8 @@ import pkgAdd from './pkg-add'
  * Register all sub `pkg` operations.
  * @param argv
  */
-const subAction = (argv: string[]) => {
-  const program = new Commander()
+export const subAction = (argv: string[], externalProgram?: any): void => {
+  const program = externalProgram || new Commander()
 
   // pkg add <package-name>
   program
@@ -50,7 +50,11 @@ const subAction = (argv: string[]) => {
  * @param input
  * @param options
  */
-const action = (command: string, input: string, ...options: string[]) => {
+export const action = (subAction: (argv: string[]) => void) => (
+  command: string,
+  input: string,
+  ...options: string[]
+) => {
   const argv = filter(process.argv, argument => argument !== 'pkg')
   input && subAction(argv)
 }
@@ -60,5 +64,5 @@ export const PkgMetaCommand: Command = {
   description: 'Package manager',
   alias: 'p',
   type: CommandType.PACKAGE,
-  action,
+  action: action(subAction),
 }
