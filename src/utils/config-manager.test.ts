@@ -5,7 +5,7 @@ import Conf from 'conf'
 import { directory } from 'tempy'
 
 // Internal import
-import ConfigManager from './config-manager'
+import ConfigManager, { getConfig } from './config-manager'
 import { ConfigKey } from '../constants/config'
 import { ConfigPackage } from '../models/Config'
 
@@ -85,6 +85,14 @@ describe('ConfigManager', () => {
     expect(result).toBeFalsy()
   })
 
+  it('should remove a package', () => {
+    const originLength = cm.packages.length
+    cm.removePackage(samplePkg.name)
+    expect(cm.packages.length).toBeLessThan(originLength)
+    expect(cm.isPackageExists(samplePkg.name)).toBeFalsy()
+    expect(cm.removePackage('not-added-package')).toBeFalsy()
+  })
+
   it('should set monorepo', done => {
     const conf = cm.getConf()
 
@@ -95,5 +103,13 @@ describe('ConfigManager', () => {
     })
 
     cm.setMonorepo(true)
+  })
+})
+
+describe('getConfig instance', () => {
+  it('should return configured config instance', () => {
+    const cmInstance = getConfig()
+    expect(cmInstance.conf).toBeTruthy()
+    expect(cmInstance.packages).toBeTruthy()
   })
 })
