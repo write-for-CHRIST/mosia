@@ -1,3 +1,5 @@
+![Mosia](./logo.png)
+
 # Mosia (מוֹשִׁיעַ)
 
 [![Travis](https://img.shields.io/travis/write-for-CHRIST/mosia.svg)](https://travis-ci.org/write-for-CHRIST/mosia)
