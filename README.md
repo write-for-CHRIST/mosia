@@ -1,4 +1,6 @@
-![Mosia](./logo.png)
+<p align="center">
+  <img align="center" src="./logo.png" width="256" alt="Mosia" />
+</p>
 
 # Mosia (מוֹשִׁיעַ)
 
