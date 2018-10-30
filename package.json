@@ -89,7 +89,7 @@
     "mapCoverage": true
   },
   "devDependencies": {
-    "@types/jest": "^22.0.0",
+    "@types/jest": "^23.3.9",
     "@types/meow": "^3.6.2",
     "@types/node": "^9.3.0",
     "all-contributors-cli": "^4.10.1",
