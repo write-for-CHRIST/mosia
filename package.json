@@ -124,7 +124,7 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
-    "chalk": "^2.3.0",
+    "chalk": "^3.0.0",
     "conf": "^1.4.0",
     "core-js": "^2.5.3",
     "get-stdin": "^5.0.1",
